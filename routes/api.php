@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\MuridController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('kelas', KelasController::class)->only(['store','update']);
+Route::get('kelas/list', [KelasController::class, 'list']);
+Route::get('kelas/detail/{id}', [KelasController::class, 'detail']);
+
+Route::resource('murid', MuridController::class)->only(['store',]);
+
+Route::get('murid/list', [MuridController::class, 'list']);
