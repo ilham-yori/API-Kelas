@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\MuridController;
+use App\Http\Controllers\NilaiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,5 +26,10 @@ Route::get('kelas/list', [KelasController::class, 'list']);
 Route::get('kelas/detail/{id}', [KelasController::class, 'detail']);
 
 Route::resource('murid', MuridController::class)->only(['store',]);
-
 Route::get('murid/list', [MuridController::class, 'list']);
+Route::get('murid/detail/{id}', [MuridController::class,'detail']);
+
+Route::resource('nilai', NilaiController::class)->only(['store']);
+Route::get('nilai/detail/{mata_pelajaran}', [NilaiController::class,'showByMataPelajaran']);
+
+

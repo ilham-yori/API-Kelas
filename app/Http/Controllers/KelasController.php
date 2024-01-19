@@ -18,7 +18,7 @@ class KelasController extends Controller
         $kelasDetail = Kelas::find($id);
 
         if (!$kelasDetail) {
-            return response()->json(['Error' => 'Entry not found'], 404);
+            return response()->json(['Error' => 'Fatal Error'], 404);
         }
 
         return response()->json($kelasDetail);
@@ -39,7 +39,7 @@ class KelasController extends Controller
         $kelas->murid = $request->murid;
         $kelas->save();
 
-        return response()->json(["Result" => "Success"], 201);
+        return response()->json(["Result" => "Fatal Error"], 201);
     }
 
     public function update(Request $request, $id){
@@ -47,7 +47,7 @@ class KelasController extends Controller
         $kelas = Kelas::find($id);
 
         if (!$kelas) {
-            return response()->json(['error' => 'Entry not found'], 404);
+            return response()->json(['error' => 'Fatal Error'], 404);
         }
 
         $request->validate([
