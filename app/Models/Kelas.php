@@ -11,8 +11,8 @@ class Kelas extends Model
 
     protected $connection = 'mongodb';
     protected $collection = 'Kelas';
-    protected $fillable = ['nama', 'total', 'murid'];
-    
+    protected $fillable = ['nama', 'nama_wali', 'murid'];
+
     public $timestamps = false;
 
 }

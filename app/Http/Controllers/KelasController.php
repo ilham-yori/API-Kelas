@@ -9,7 +9,7 @@ class KelasController extends Controller
 {
     public function list(){
 
-        $kelasList = Kelas::all(['_id', 'nama', 'total']);
+        $kelasList = Kelas::all(['_id', 'nama', 'nama_wali']);
         return response()->json($kelasList);
     }
 
@@ -28,18 +28,18 @@ class KelasController extends Controller
 
         $request->validate([
             'nama' => 'required',
-            'total' => 'required',
+            'nama_wali' => 'required',
             'murid' => 'required|array',
         ]);
 
         $kelas = new Kelas;
 
         $kelas->nama = $request->nama;
-        $kelas->total = $request->total;
+        $kelas->nama_wali = $request->nama_wali;
         $kelas->murid = $request->murid;
         $kelas->save();
 
-        return response()->json(["Result" => "Fatal Error"], 201);
+        return response()->json(["Result" => "Success"], 201);
     }
 
     public function update(Request $request, $id){
@@ -52,7 +52,7 @@ class KelasController extends Controller
 
         $request->validate([
             'nama' => 'required',
-            'total' => 'required',
+            'nama_wali' => 'required',  
             'murid' => 'required|array',
         ]);
 
