@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "8165b6e4-7936-455d-88fc-e40f1455f433",
+		"name": "Bootcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20040031"
+	},
+	"item": [
+		{
+			"name": "Add Kelas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "1-A",
+							"type": "text"
+						},
+						{
+							"key": "nama_wali",
+							"value": "Widodadi",
+							"type": "text"
+						},
+						{
+							"key": "murid[]",
+							"value": "Nisa",
+							"type": "text"
+						},
+						{
+							"key": "murid[]",
+							"value": "Bowo",
+							"type": "text"
+						},
+						{
+							"key": "murid[]",
+							"value": "Prawono",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kelas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kelas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Kelas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kelas/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kelas",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Kelas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kelas/detail/65ab47cf7a17d6b0350782f2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kelas",
+						"detail",
+						"65ab47cf7a17d6b0350782f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Kelas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "1-B",
+							"type": "text"
+						},
+						{
+							"key": "nama_wali",
+							"value": "Widido",
+							"type": "text"
+						},
+						{
+							"key": "murid[]",
+							"value": "Anisa",
+							"type": "text"
+						},
+						{
+							"key": "murid[]",
+							"value": "Bowo",
+							"type": "text"
+						},
+						{
+							"key": "murid[]",
+							"value": "Pranowo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kelas/65ab47cf7a17d6b0350782f2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kelas",
+						"65ab47cf7a17d6b0350782f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Murid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Roni",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_lahir",
+							"value": "2004-04-02",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Surabaya",
+							"type": "text"
+						},
+						{
+							"key": "nama_ortu[]",
+							"value": "Heru",
+							"type": "text"
+						},
+						{
+							"key": "nama_ortu[]",
+							"value": "Putri",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/murid",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"murid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Murid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/murid/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"murid",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Murid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/murid/detail/65a5037f51ca533606044589",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"murid",
+						"detail",
+						"65a5037f51ca533606044589"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Nilai",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "65a5037f51ca533606044589",
+							"type": "text"
+						},
+						{
+							"key": "mata_pelajaran",
+							"value": "MTK",
+							"type": "text"
+						},
+						{
+							"key": "nilai_latihan_soal[Latihan 1]",
+							"value": "82",
+							"type": "text"
+						},
+						{
+							"key": "nilai_latihan_soal[Latihan 2]",
+							"value": "81",
+							"type": "text"
+						},
+						{
+							"key": "nilai_latihan_soal[Latihan 3]",
+							"value": "83",
+							"type": "text"
+						},
+						{
+							"key": "nilai_latihan_soal[Latihan 4]",
+							"value": "89",
+							"type": "text"
+						},
+						{
+							"key": "nilai_ulangan_harian[Ulangan 1]",
+							"value": "90",
+							"type": "text"
+						},
+						{
+							"key": "nilai_ulangan_harian[Ulangan 2]",
+							"value": "78",
+							"type": "text"
+						},
+						{
+							"key": "nilai_uts",
+							"value": "92",
+							"type": "text"
+						},
+						{
+							"key": "nilai_uas",
+							"value": "91",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/nilai",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"nilai"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Nilai Mata Pelajaran",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/nilai/detail/MTK",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"nilai",
+						"detail",
+						"MTK"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
