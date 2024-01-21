@@ -20,7 +20,7 @@ class MuridController extends Controller
         $murid = Murid::find($id);
 
         if (!$murid) {
-            return response()->json(['error' => 'Fatal Error'], 404);
+            return response()->json(['Error' => 'Fatal Error'], 404);
         }
 
         $additionalData = Nilai::where('murid_id', $id)->get();

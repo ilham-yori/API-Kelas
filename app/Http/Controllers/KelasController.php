@@ -47,12 +47,12 @@ class KelasController extends Controller
         $kelas = Kelas::find($id);
 
         if (!$kelas) {
-            return response()->json(['error' => 'Fatal Error'], 404);
+            return response()->json(['Error' => 'Fatal Error'], 404);
         }
 
         $request->validate([
             'nama' => 'required',
-            'nama_wali' => 'required',  
+            'nama_wali' => 'required',
             'murid' => 'required|array',
         ]);
 

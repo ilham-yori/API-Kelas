@@ -13,7 +13,7 @@ class NilaiController extends Controller
         $nilaiData = Nilai::where('mata_pelajaran', $mataPelajaran)->get();
 
         if ($nilaiData->isEmpty()) {
-            return response()->json(['error' => 'No data found for the given mata_pelajaran.'], 404);
+            return response()->json(['Error' => 'Fatal Error'], 404);
         }
 
         $transformedData = $nilaiData->map(function ($nilai) {
@@ -42,7 +42,7 @@ class NilaiController extends Controller
         $murid = Murid::find($request->id);
 
         if (!$murid) {
-            return response()->json(['message' => 'Fatal Error'], 404);
+            return response()->json(['Error' => 'Fatal Error'], 404);
         }
 
         $nilai = new Nilai;
@@ -56,6 +56,6 @@ class NilaiController extends Controller
 
         $nilai->save();
 
-        return response()->json(['message' => 'Success'], 201);
+        return response()->json(['Result' => 'Success'], 201);
     }
 }
